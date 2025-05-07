@@ -1,0 +1,109 @@
+/* src/styles/primevue-variables.css */
+
+/* Primary and Surface Palettes (你可以根据你的品牌色调整这些 --p-primary-xxx 的值) */
+:root {
+    --p-primary-50: #eff6ff;  /* 示例：Tailwind Blue 50 */
+    --p-primary-100: #dbeafe; /* 示例：Tailwind Blue 100 */
+    --p-primary-200: #bfdbfe; /* 示例：Tailwind Blue 200 */
+    --p-primary-300: #93c5fd; /* 示例：Tailwind Blue 300 */
+    --p-primary-400: #60a5fa; /* 示例：Tailwind Blue 400 */
+    --p-primary-500: #3b82f6; /* 示例：Tailwind Blue 500 - 主色 */
+    --p-primary-600: #2563eb; /* 示例：Tailwind Blue 600 */
+    --p-primary-700: #1d4ed8; /* 示例：Tailwind Blue 700 */
+    --p-primary-800: #1e40af; /* 示例：Tailwind Blue 800 */
+    --p-primary-900: #1e3a8a; /* 示例：Tailwind Blue 900 */
+    --p-primary-950: #172554; /* 示例：Tailwind Blue 950 */
+
+    --p-surface-0: #ffffff;
+    --p-surface-50: #f9fafb;  /* Tailwind Gray 50 */
+    --p-surface-100: #f3f4f6; /* Tailwind Gray 100 */
+    --p-surface-200: #e5e7eb; /* Tailwind Gray 200 */
+    --p-surface-300: #d1d5db; /* Tailwind Gray 300 */
+    --p-surface-400: #9ca3af; /* Tailwind Gray 400 */
+    --p-surface-500: #6b7280; /* Tailwind Gray 500 */
+    --p-surface-600: #4b5563; /* Tailwind Gray 600 */
+    --p-surface-700: #374151; /* Tailwind Gray 700 */
+    --p-surface-800: #1f2937; /* Tailwind Gray 800 */
+    --p-surface-900: #111827; /* Tailwind Gray 900 */
+    --p-surface-950: #030712; /* Tailwind Gray 950 */
+
+    --p-content-border-radius: 6px; /* 示例圆角 */
+}
+
+/* Light Mode (默认) */
+:root {
+    --p-primary-color: var(--p-primary-500);
+    --p-primary-contrast-color: var(--p-surface-0);
+    --p-primary-hover-color: var(--p-primary-600);
+    --p-primary-active-color: var(--p-primary-700);
+
+    --p-text-color: var(--p-surface-700); /* 主要文字颜色 */
+    --p-text-muted-color: var(--p-surface-500); /* 次要/提示文字颜色 */
+    --p-text-hover-color: var(--p-surface-800);
+    --p-text-hover-muted-color: var(--p-surface-600);
+
+    --p-content-padding-x: 1rem; /* 示例内边距 */
+    --p-content-padding-y: 0.5rem;
+    --p-content-background: var(--p-surface-0);
+    --p-content-border-color: var(--p-surface-200);
+    --p-content-hover-background: var(--p-surface-50); /* 轻微调整 */
+    --p-content-hover-color: var(--p-surface-800);
+
+    --p-highlight-background: var(--p-primary-50);
+    --p-highlight-color: var(--p-primary-700);
+    --p-highlight-focus-background: var(--p-primary-100);
+    --p-highlight-focus-color: var(--p-primary-800);
+
+    /* Input specific variables (can be customized further) */
+    --p-input-background: var(--p-surface-0);
+    --p-input-border-color: var(--p-surface-300);
+    --p-input-hover-border-color: var(--p-primary-500);
+    --p-input-focus-border-color: var(--p-primary-500);
+    --p-input-focus-shadow: 0 0 0 0.2rem var(--p-primary-100); /* 示例焦点阴影 */
+    --p-input-disabled-background: var(--p-surface-100);
+    --p-input-disabled-border-color: var(--p-surface-200);
+    --p-input-error-border-color: #ef4444; /* Tailwind Red 500 */
+}
+
+
+/* Dark Mode (根据Tailwind暗黑模式配置调整选择器) */
+/* 假设你的 tailwind.config.js 中 darkMode: 'class' (默认) */
+
+html.dark { /* 或者 :root.dark */
+    --p-primary-color: var(--p-primary-400);
+    --p-primary-contrast-color: var(--p-surface-900);
+    --p-primary-hover-color: var(--p-primary-300);
+    --p-primary-active-color: var(--p-primary-200);
+
+    --p-text-color: var(--p-surface-50); /* 主要文字颜色 (浅色) */
+    --p-text-muted-color: var(--p-surface-400);
+    --p-text-hover-color: var(--p-surface-0);
+    --p-text-hover-muted-color: var(--p-surface-300);
+
+    --p-content-background: var(--p-surface-800);
+    --p-content-border-color: var(--p-surface-700);
+    --p-content-hover-background: var(--p-surface-700); /* 轻微调整 */
+    --p-content-hover-color: var(--p-surface-0);
+
+    --p-highlight-background: color-mix(in srgb, var(--p-primary-400), transparent 84%);
+    --p-highlight-color: var(--p-surface-0);
+    --p-highlight-focus-background: color-mix(in srgb, var(--p-primary-400), transparent 76%);
+    --p-highlight-focus-color: var(--p-surface-0);
+
+    /* Input specific variables for dark mode */
+    --p-input-background: var(--p-surface-700);
+    --p-input-border-color: var(--p-surface-600);
+    --p-input-hover-border-color: var(--p-primary-400);
+    --p-input-focus-border-color: var(--p-primary-400);
+    --p-input-focus-shadow: 0 0 0 0.2rem var(--p-primary-900); /* 示例焦点阴影 */
+    --p-input-disabled-background: var(--p-surface-800);
+    --p-input-disabled-border-color: var(--p-surface-700);
+    --p-input-error-border-color: #f87171; /* Tailwind Red 400 */
+
+    /* 更新 surface 变量以匹配暗黑模式背景 */
+    --p-surface-0: #111827;  /* Tailwind Gray 900 */
+    --p-surface-50: #1f2937; /* Tailwind Gray 800 */
+    /* ... 其他 surface 变量也需要反转或调整 ... */
+    --p-surface-900: #f9fafb; /* Tailwind Gray 50 */
+    --p-surface-950: #ffffff;
+}
